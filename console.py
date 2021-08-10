@@ -6,5 +6,6 @@ staff_1 = Staff('Jeremy', 'Yoo')
 staff_repo.save(staff_1)
 staff_2 = Staff('Nathan', 'Pianu')
 staff_repo.save(staff_2)
+staff_3 = Staff('John', 'King')
 
 pdb.set_trace()

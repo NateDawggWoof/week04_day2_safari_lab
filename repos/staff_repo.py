@@ -1,7 +1,7 @@
 from db.run_sql import run_sql
 from models.staff import Staff
 
-# def save(user):
+# def save(user): O
 def save(staff):
     sql = "INSERT INTO staffs (first_name, last_name) VALUES (%s, %s) RETURNING *"
     values = [staff.first_name, staff.last_name]
@@ -10,7 +10,7 @@ def save(staff):
     staff.id = id
     return staff
 
-# def select_all():
+# def select_all(): O
 def select_all():
     staffs = []
     sql = "SELECT * FROM staffs"
@@ -20,7 +20,7 @@ def select_all():
         staffs.append(staff)
     return staffs
 
-# def select(id):
+# def select(id): O
 def select(id):
     staff = None
     sql = "SELECT * FROM staffs WHERE id = %s"
@@ -35,18 +35,14 @@ def delete_all():
     sql = "DELETE FROM staffs"
     run_sql(sql)
 
-# def delete(id):
+# def delete(id): O
 def delete(id):
     sql = "DELETE FROM staffs WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
-# def update(user):
+# def update(user): O
 def update(staff):
     sql = "UPDATE staffs SET (first_name, last_name) = (%s, %s) WHERE id = %s"
     values = [staff.first_name, staff.last_name, staff.id]
     run_sql(sql, values)
-
-# def tasks(user):
-
-
