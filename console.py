@@ -15,5 +15,7 @@ animal_1 = Animal('Joy', 'Tiger', staff_1)
 animal_repo.save(animal_1)
 animal_2 = Animal('Coy', 'Lion', staff_2)
 animal_repo.save(animal_2)
+animal_3 = Animal('Poy', 'Dog', staff_2)
+animal_repo.save(animal_3)
 
 pdb.set_trace()
